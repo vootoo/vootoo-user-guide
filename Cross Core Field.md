@@ -5,7 +5,7 @@
 ## 配置方法
 
 ### vootoo-core-XXX.jar
-把 vootoo-core-0.4.0.jar 放到 *solr_home*/lib 目录里。
+把 [vootoo-core-0.4.0.jar](https://oss.sonatype.org/service/local/repositories/releases/content/org/vootoo/vootoo-core/0.4.0/vootoo-core-0.4.0.jar) 放到 *solr_home*/lib 目录里。
 
 ### schema
 schema.xml 加入字段及类型的声明，如：
@@ -78,7 +78,7 @@ http://localhost:8983/solr/main_core/select?q=*:*&wt=xml&indent=true
 分别从三个使用上输出：
 
 * 排序 - 函数排序 ```mul(_solr_sub_core.other_i,2) desc```
-  * 字段排序 ```field(_solr_sub_core.other_i) desc``` 
+  * 字段排序 ```field(_solr_sub_core.other_i) desc```
 * 输出 - 函数输出 ```fl=*,other_i:sum(field(_solr_sub_core.other_i),3)``` 此时也要用 field 函数取出
 * 输出排序值 - 用 ```fsv=true``` 参数。
 
